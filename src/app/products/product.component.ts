@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+declare const genRandomNumbers: any;
 
 @Component({
     selector: 'app-product',
@@ -7,5 +8,6 @@ import { Component } from "@angular/core";
 })
 
 export class ProductComponent {
-    showDiv = false;
+    showDiv = true;
+    rNum = <[]>genRandomNumbers();
 }

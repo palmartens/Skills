@@ -8,5 +8,21 @@ declare const genRandomNumbers: any;
 })
 
 export class ProductComponent {
-    departments = ["Mountainbikes", "Roadbikes","Hybrid Bikes", "Bike Pumps"];
+    employees = [
+        {
+            name: "Axle",
+            employeeID: 1234,
+            department: "IT"
+        },
+        {
+            name: "Philippe",
+            employeeID: 666,
+            department: "R&D"
+        },
+        {
+            name: "John",
+            employeeID: 777,
+            department: "IT"
+        }   
+    ];
 }

@@ -10,6 +10,11 @@ declare const genRandomNumbers: any;
 export class ProductComponent {
     @Input() p_title: string;
     @Output() c_newProductEvent = new EventEmitter<string>();
+
+    inStock: number = 10;
+    child1Method() {
+        console.log("A method in the prodcut component - the child!");
+    }
     
     addProduct(value: string){
         this.c_newProductEvent.emit(value);

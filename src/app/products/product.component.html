@@ -1,12 +1,8 @@
 <h2>Product List</h2>
 <div>
-    <ul>
-        <li *ngFor="let x of rNum | 
-            paginate: {itemsPerPage: itemsToDisplay, currentPage: page}">{{ x | classify }} </li>
-        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
-    </ul>
-    <div>
-        {{ p_title }}
-    </div>
+    <div>Product 1</div>
+    <label>Add a new Product: <input type="text" #newProduct></label>
+    <button class="btn" (click)="addProduct(newProduct.value)">Add!</button>
+
 </div>
 

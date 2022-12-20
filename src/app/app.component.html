@@ -1,2 +1,2 @@
-<app-product [p_title]="title"></app-product>
+<app-product [p_title]="title" (c_newProductEvent)="p_addProduct($event)"></app-product>
 <router-outlet></router-outlet>

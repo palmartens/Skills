@@ -7,4 +7,8 @@ import { Component, Output } from '@angular/core';
 })
 export class AppComponent {
   @Output() title: string = 'Skills';
+
+  p_addProduct(newProduct: string) {
+    console.log(newProduct)
+  }
 }

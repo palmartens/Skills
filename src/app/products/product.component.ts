@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 declare const genRandomNumbers: any;
 
 @Component({
@@ -8,6 +8,8 @@ declare const genRandomNumbers: any;
 })
 
 export class ProductComponent {
+    @Input() p_title: string;
+    
     employees = [
         {
             name: "Axle",

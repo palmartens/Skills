@@ -5,5 +5,8 @@
             paginate: {itemsPerPage: itemsToDisplay, currentPage: page}">{{ x | classify }} </li>
         <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
     </ul>
+    <div>
+        {{ p_title }}
+    </div>
 </div>
 

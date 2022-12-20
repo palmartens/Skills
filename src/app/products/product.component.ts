@@ -25,4 +25,13 @@ export class ProductComponent {
             department: "IT"
         }   
     ];
+
+    page: number = 1;
+    itemsToDisplay: number = 10;
+    
+    rNum = <[]>genRandomNumbers();
+
+    pageChanged(event: any) {
+        this.page = event
+    }
 }

@@ -1,7 +1,9 @@
 <h2>Product List</h2>
 <div>
     <ul>
-        <li *ngFor="let employee of employees">{{ employee.name }}</li>
+        <li *ngFor="let x of rNum | 
+            paginate: {itemsPerPage: itemsToDisplay, currentPage: page}">{{ x }} </li>
+        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
     </ul>
 </div>
 

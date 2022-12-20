@@ -1,3 +1,7 @@
 <h2>Product List</h2>
-<div *ngIf="showDiv">Product 1</div>
-<div>{{rNum}}</div>
+<div>
+    <ul>
+        <li *ngFor="let department of departments">{{ department }}</li>
+    </ul>
+</div>
+

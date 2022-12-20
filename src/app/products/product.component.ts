@@ -8,6 +8,5 @@ declare const genRandomNumbers: any;
 })
 
 export class ProductComponent {
-    showDiv = true;
-    rNum = <[]>genRandomNumbers();
+    departments = ["Mountainbikes", "Roadbikes","Hybrid Bikes", "Bike Pumps"];
 }

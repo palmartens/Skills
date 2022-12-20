@@ -2,7 +2,7 @@
 <div>
     <ul>
         <li *ngFor="let x of rNum | 
-            paginate: {itemsPerPage: itemsToDisplay, currentPage: page}">{{ x }} </li>
+            paginate: {itemsPerPage: itemsToDisplay, currentPage: page}">{{ x | classify }} </li>
         <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
     </ul>
 </div>

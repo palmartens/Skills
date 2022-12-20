@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductsFeatureModule } from './products-feature/products-feature.module';
+import { ProductComponent } from './products/product.component';
+import { ClassifyPipe } from './classify.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClassifyPipe,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductsFeatureModule
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

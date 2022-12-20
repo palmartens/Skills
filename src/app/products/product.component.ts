@@ -29,10 +29,10 @@ export class ProductComponent {
     page: number = 1;
     itemsToDisplay: number = 10;
     
-    rNum = <[]>genRandomNumbers().sort((x: number,y: number) => {
-        return x-y
+    rNum = <[]>genRandomNumbers().filter((x: number) => {
+        return x < 2000;
     });
-    
+
 
     pageChanged(event: any) {
         this.page = event

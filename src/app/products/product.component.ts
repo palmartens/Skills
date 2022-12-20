@@ -29,7 +29,10 @@ export class ProductComponent {
     page: number = 1;
     itemsToDisplay: number = 10;
     
-    rNum = <[]>genRandomNumbers();
+    rNum = <[]>genRandomNumbers().sort((x: number,y: number) => {
+        return x-y
+    });
+    
 
     pageChanged(event: any) {
         this.page = event

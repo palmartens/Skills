@@ -1,4 +1,11 @@
-<h2>Product List</h2>
-<div>  
+<div> 
+    <div class="todo" *ngFor="let todo of todos">
+        <p>ID: {{todo.id}}</p>
+        <p>userID: {{todo.userId}}</p>
+        <p>Title: {{todo.title}}</p>
+        <p>Completed: {{todo.completed | yesno }}</p>
+    </div>
+        
+    
 </div>
 

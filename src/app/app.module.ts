@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './products/product.component';
 import { ClassifyPipe } from './classify.pipe';
+import { YesnoPipe } from './yesno.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClassifyPipe,
-    ProductComponent
+    ProductComponent,
+    YesnoPipe
   ],
   imports: [
     BrowserModule,

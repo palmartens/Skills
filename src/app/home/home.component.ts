@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-home',
@@ -10,12 +9,11 @@ export class HomeComponent implements OnInit {
   public isLoggedIn: boolean = false;
 
 
-  constructor(private profileService: ProfileService) {
+  constructor() {
     
   }
 
-  ngOnInit() {
-    this.isLoggedIn = this.profileService.loggedInStatus();
+  ngOnInit() {    
   }
 
 

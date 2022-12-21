@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { shareReplay, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,8 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   customerName: string = 'Philippe';
   email: string;
-  password: string;  
+  password: string;
+  observableData: Observable<any>;
 
   onSubmit(form: NgForm) {
     // console.log("FORM Value:", form.value);
@@ -25,10 +28,17 @@ export class HomeComponent implements OnInit {
     });    
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.observableData = http.get('http://localhost:3000/customers').pipe(
+      tap(console.log),
+      shareReplay()
+    );
+  }
 
   ngOnInit() {
-
+    this.observableData.subscribe();
+    this.observableData.subscribe();
+    this.observableData.subscribe();
   }
 
 }

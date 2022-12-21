@@ -1,13 +1,21 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
-declare const genRandomNumbers: any;
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+// declare const genRandomNumbers: any;
+
+interface jsonData {
+    userID: string;
+    id: string;
+    title: string;
+    completed: boolean;
+}
 
 @Component({
     selector: 'app-product',
     templateUrl: 'product.component.html',
     styles: ['div {margin-top: 50px; margin-botton:20px; }']
 })
-
-export class ProductComponent {
+export class ProductComponent implements OnInit {
+    
     @Input() p_title: string;
     @Output() c_newProductEvent = new EventEmitter<string>();
 
@@ -18,6 +26,15 @@ export class ProductComponent {
     
     addProduct(value: string){
         this.c_newProductEvent.emit(value);
+    }
+
+
+    constructor(private http: HttpClient) { }
+
+    ngOnInit() {
+        this.http.get<jsonData[]>("https://jsonplaceholder.typicode.com/todos").subscribe(returnData => {
+            console.log(returnData);
+        });
     }
     
 }

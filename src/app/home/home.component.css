@@ -1,0 +1,19 @@
+div.main {
+    border: 2px;
+    border-style: groove;
+    width: 600px;
+    background-color: bisque;
+    margin-top: 20px;
+}
+
+.form-group {
+    padding:0px 20px;
+    margin-bottom:10px;
+}
+.form-control {
+    margin-bottom:4px;       
+}
+
+button {
+    margin-bottom: 10px;      
+}

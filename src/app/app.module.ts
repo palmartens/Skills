@@ -8,6 +8,7 @@ import { ProductComponent } from './products/product.component';
 import { ClassifyPipe } from './classify.pipe';
 import { YesnoPipe } from './yesno.pipe';
 import { HomeComponent } from './home/home.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

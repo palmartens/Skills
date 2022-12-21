@@ -10,14 +10,19 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   customerName: string = 'Philippe';
   email: string;
-  password: string;
-  private endPoint: string = 'http://localhost:3000/customers';
+  password: string;  
 
   onSubmit(form: NgForm) {
     // console.log("FORM Value:", form.value);
-    this.http.post(this.endPoint, form.value).subscribe(returnData => {
+    this.http.post('http://localhost:3000/customers', form.value).subscribe(returnData => {
       console.log("Post finished, data:",returnData);
     });
+  }
+
+  deleteDocument() {
+    this.http.delete('http://localhost:3000/customers/1').subscribe(returnData => {
+      console.log("Delete finished, data:",returnData);
+    });    
   }
 
   constructor(private http: HttpClient) {}

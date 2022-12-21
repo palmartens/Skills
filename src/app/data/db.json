@@ -1,10 +1,4 @@
 {
   "customers": [
-    {
-      "customerName": "Philippe",
-      "email": "palmartens@ziggo.nl",
-      "password": "1234",
-      "id": 1
-    }
   ]
 }

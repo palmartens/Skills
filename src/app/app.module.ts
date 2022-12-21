@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductComponent } from './product/product.component'
+import { ProfileService } from './profile.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ProductComponent } from './product/product.component'
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
